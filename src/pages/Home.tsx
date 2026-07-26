@@ -36,7 +36,7 @@ export default function Home() {
       setLoading(true);
       setError("");
 
-      const API_KEY = "AIzaSyBqOUVQhUM5qpGWeuuCC5EBLkN3x6xhjec";
+      const API_KEY = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
 
       const res = await fetch(
         `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(trimmed)}&key=${API_KEY}`
